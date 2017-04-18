@@ -34,8 +34,8 @@ public class CopyObject {
     throws IOException, NoSuchAlgorithmException, InvalidKeyException, XmlPullParserException {
     try {
       /* play.minio.io for test and development. */
-      MinioClient minioClient = new MinioClient("http://minio.instance.domain:9000", "minio",
-                                                "minio123");
+      MinioClient minioClient = new MinioClient("https://play.minio.io:9000", "Q3AM3UQ867SPQQA43P2F",
+                                                "zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG");
 
       /* Amazon S3: */
       // MinioClient minioClient = new MinioClient("https://s3.amazonaws.com", "YOUR-ACCESSKEYID",
@@ -60,6 +60,9 @@ public class CopyObject {
         builder.append("brave ghost pled; Watch Jeopardy!, Alex Trebeks fun TV quiz game.\n");
         builder.append("---\n");
       }
+
+//minioClient.makeBucket("my-bucketname");
+//minioClient.makeBucket("my-destbucketname");
 
       // Create a InputStream for object upload.
       ByteArrayInputStream bais = new ByteArrayInputStream(builder.toString().getBytes("UTF-8"));
